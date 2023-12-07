@@ -27,7 +27,7 @@
                                 CompanyId :  {{item.companyId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Status :  {{item.status }}
+                                SalesStatus :  {{item.salesStatus }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 SalesItems :  {{item.salesItems }}

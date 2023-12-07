@@ -70,7 +70,7 @@
                     { text: "salesPerson", value: "salesPerson" },
                     { text: "salesType", value: "salesType" },
                     { text: "companyId", value: "companyId" },
-                    { text: "status", value: "status" },
+                    { text: "salesStatus", value: "salesStatus" },
                     { text: "salesItems", value: "salesItems" },
                 ],
             salesOrder : [],
@@ -93,7 +93,7 @@
                 'salesPerson': '',
                 'salesType': '',
                 'companyId': {},
-                'status': '',
+                'salesStatus': '',
                 'salesItems': [],
             }
         },

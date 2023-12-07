@@ -12,8 +12,8 @@
                 <v-col style="max-width:140px;">
                     <String class="attributes-list" label="Code" v-model="value.parameters.code" :editMode="editMode"/>
                 </v-col>
-                <v-col style="max-width:140px;">
-                    <Status offline label="Status" v-model="value.parameters.status" :editMode="editMode" @change="change"/>
+                <v-col style="max-width:150px;">
+                    <Status style="margin-top: 0px; margin-left: 10px;" offline label="Status" v-model="value.parameters.status" :editMode="editMode" @change="change"/>
                 </v-col>
                 <v-col>
                     <v-btn class="gs-query-search-btn contrast-primary-text"
@@ -32,10 +32,12 @@
 
 <script>
 import String from './primitives/String.vue'
+import Status from './Status.vue'
     export default {
         name: 'ProductQuery',
         components:{
             String,
+            Status,
         },
         props: {},
         data: () => ({

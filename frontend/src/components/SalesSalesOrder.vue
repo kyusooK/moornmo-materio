@@ -20,7 +20,7 @@
             <String label="SalesPerson" v-model="value.salesPerson" :editMode="editMode" :inputUI="''"/>
             <SalesType offline label="SalesType" v-model="value.salesType" :editMode="editMode" @change="change"/>
             <CompanyId offline label="CompanyId" v-model="value.companyId" :editMode="editMode" @change="change"/>
-            <Status offline label="Status" v-model="value.status" :editMode="editMode" @change="change"/>
+            <SalesStatus offline label="SalesStatus" v-model="value.salesStatus" :editMode="editMode" @change="change"/>
             <List&lt;SalesItem&gt; offline label="SalesItems" v-model="value.salesItems" :editMode="editMode" @change="change"/>
             <SalesItemManager offline label="SalesItems" v-model="value.salesItems" :editMode="editMode" @change="change"/>
         </v-card-text>

@@ -35,7 +35,7 @@
                             <th>Name</th>
                             <th>Code</th>
                             <th>Spec</th>
-                            <th>Status</th>
+                            <th>ProductStatus</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,7 +44,7 @@
                                 <td class="whitespace-nowrap" label="Name">{{ val.name }}</td>
                                 <td class="whitespace-nowrap" label="Code">{{ val.code }}</td>
                                 <td class="whitespace-nowrap" label="Spec">{{ val.spec }}</td>
-                                <td class="whitespace-nowrap" label="Status">{{ val.status }}</td>
+                                <td class="whitespace-nowrap" label="ProductStatus">{{ val.productStatus }}</td>
                                 <Icon style="margin-top: 15px;" icon="mi:delete" @click="deleteRow(val)" />
                             </tr>
                         </tbody>

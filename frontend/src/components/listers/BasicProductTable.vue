@@ -70,7 +70,7 @@
                     { text: "name", value: "name" },
                     { text: "code", value: "code" },
                     { text: "spec", value: "spec" },
-                    { text: "status", value: "status" },
+                    { text: "productStatus", value: "productStatus" },
                 ],
             product : [],
             newValue: {},
@@ -91,7 +91,7 @@
                 'name': '',
                 'code': '',
                 'spec': '',
-                'status': '',
+                'productStatus': '',
             }
         },
         methods: {

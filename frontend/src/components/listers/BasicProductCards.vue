@@ -112,7 +112,7 @@
                 'name': '',
                 'code': '',
                 'spec': '',
-                'status': '',
+                'productStatus': '',
             }
         },
         methods:{

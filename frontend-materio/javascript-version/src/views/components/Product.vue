@@ -3,7 +3,7 @@
         <String label="Name" v-model="value.name" :editMode="editMode"/>
         <String label="Code" v-model="value.code" :editMode="editMode"/>
         <String label="Spec" v-model="value.spec" :editMode="editMode"/>
-        <Status offline label="Status" v-model="value.status" :editMode="editMode" @change="change"/>
+        <ProductStatus offline label="ProductStatus" v-model="value.productStatus" :editMode="editMode" @change="change"/>
 
         <v-divider class="border-opacity-100 my-divider"></v-divider>
         <v-layout row justify-end>
@@ -23,14 +23,14 @@
 
 import BaseEntity from './base-ui/BaseEntity.vue'
 import String from './primitives/String.vue'
-import Status from './Status.vue'
+import ProductStatus from './ProductStatus.vue'
 
 export default {
     name: 'Product',
     mixins:[BaseEntity],
     components:{
         String,
-        Status,
+        ProductStatus,
     },
     
     data: () => ({

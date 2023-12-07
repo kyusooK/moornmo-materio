@@ -19,7 +19,7 @@
             <String label="Name" v-model="value.name" :editMode="editMode" :inputUI="''"/>
             <String label="Code" v-model="value.code" :editMode="editMode" :inputUI="''"/>
             <String label="Spec" v-model="value.spec" :editMode="editMode" :inputUI="''"/>
-            <Status offline label="Status" v-model="value.status" :editMode="editMode" @change="change"/>
+            <ProductStatus offline label="ProductStatus" v-model="value.productStatus" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
