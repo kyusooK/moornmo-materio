@@ -13,7 +13,7 @@
             </div>
             <SalesType offline label="SalesType" v-model="item.salesType" :editMode="false" :key="false" @change="change" />
             <CompanyId offline label="CompanyId" v-model="item.companyId" :editMode="false" :key="false" @change="change" />
-            <Status offline label="Status" v-model="item.status" :editMode="false" :key="false" @change="change" />
+            <SalesStatus offline label="SalesStatus" v-model="item.salesStatus" :editMode="false" :key="false" @change="change" />
             <SalesItemManager offline label="SalesItems" v-model="item.salesItems" :editMode="false" @change="change" />
         </v-card-text>
 

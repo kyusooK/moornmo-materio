@@ -1,6 +1,6 @@
 <template>
     <div v-if="editMode">
-        {{ label }}
+        
         <v-text-field
             v-bind="attrs"
             v-model="filteredDate"

@@ -25,7 +25,7 @@
                                 Spec :  {{item.spec }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Status :  {{item.status }}
+                                ProductStatus :  {{item.productStatus }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

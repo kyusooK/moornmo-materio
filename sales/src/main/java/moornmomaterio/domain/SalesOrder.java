@@ -27,7 +27,7 @@ public class SalesOrder {
     @Embedded
     private CompanyId companyId;
 
-    private Status status;
+    private SalesStatus salesStatus;
 
     @ElementCollection
     private List<SalesItem> salesItems;

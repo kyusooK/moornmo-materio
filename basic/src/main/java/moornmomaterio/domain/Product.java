@@ -24,7 +24,7 @@ public class Product {
 
     private String spec;
 
-    private Status status;
+    private ProductStatus productStatus;
 
     @PostPersist
     public void onPostPersist() {

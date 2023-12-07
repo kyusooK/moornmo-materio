@@ -42,7 +42,7 @@
                             <th>Id</th>
                             <th>SalesPerson</th>
                             <th>SalesType</th>
-                            <th>Status</th>
+                            <th>SalesStatus</th>
                             <th>CompanyId</th>
                             </tr>
                         </thead>
@@ -51,7 +51,7 @@
                                 <td class="font-semibold">{{ idx + 1 }}</td>
                                 <td class="whitespace-nowrap" label="SalesPerson">{{ val.salesPerson }}</td>
                                 <td class="whitespace-nowrap" label="SalesType">{{ val.salesType }}</td>
-                                <td class="whitespace-nowrap" label="Status">{{ val.status }}</td>
+                                <td class="whitespace-nowrap" label="SalesStatus">{{ val.salesStatus }}</td>
                                 <td class="whitespace-nowrap" label="회사정보">
                                     <CompanyId :editMode="editMode" v-model="val.companyId"></CompanyId>
                                 </td>

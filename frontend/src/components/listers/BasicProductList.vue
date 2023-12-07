@@ -52,7 +52,7 @@
                             [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Code :  {{data.code }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Spec :  {{data.spec }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ProductStatus :  {{data.productStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -123,7 +123,7 @@
                 'name': '',
                 'code': '',
                 'spec': '',
-                'status': '',
+                'productStatus': '',
             }
         },
         methods: {
