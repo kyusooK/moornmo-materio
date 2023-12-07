@@ -25,20 +25,20 @@ public class SalesOrderController {
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
-    public SalesOrder product(
+    public SalesOrder produce(
         @PathVariable(value = "id") Long id,
-        @RequestBody ProductCommand productCommand,
+        @RequestBody ProduceCommand produceCommand,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {
-        System.out.println("##### /salesOrder/product  called #####");
+        System.out.println("##### /salesOrder/produce  called #####");
         Optional<SalesOrder> optionalSalesOrder = salesOrderRepository.findById(
             id
         );
 
         optionalSalesOrder.orElseThrow(() -> new Exception("No Entity Found"));
         SalesOrder salesOrder = optionalSalesOrder.get();
-        salesOrder.product(productCommand);
+        salesOrder.produce(produceCommand);
 
         salesOrderRepository.save(salesOrder);
         return salesOrder;

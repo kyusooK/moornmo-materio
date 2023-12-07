@@ -24,14 +24,14 @@
                     <v-btn style="margin-left: 5px;" @click="editSelectedRow()" class="contrast-primary-text" small color="primary">
                         <v-icon small>mdi-pencil</v-icon>수정
                     </v-btn>
-                    <v-btn style="margin-left: 5px;" @click="productDialog = true" class="contrast-primary-text" small color="primary" >
+                    <v-btn style="margin-left: 5px;" @click="produceDialog = true" class="contrast-primary-text" small color="primary" >
                         <v-icon small>mdi-minus-circle-outline</v-icon>생산완료
                     </v-btn>
-                    <v-dialog v-model="productDialog" width="500">
-                        <ProductCommand
-                            @closeDialog="productDialog = false"
-                            @product="product"
-                        ></ProductCommand>
+                    <v-dialog v-model="produceDialog" width="500">
+                        <ProduceCommand
+                            @closeDialog="produceDialog = false"
+                            @produce="produce"
+                        ></ProduceCommand>
                     </v-dialog>
                 </div>
                 <div class="mb-5 text-lg font-bold"></div>
@@ -138,16 +138,16 @@ export default {
     },
     data: () => ({
         path: 'salesOrders',
-        productDialog: false,
+        produceDialog: false,
     }),
     watch: {
     },
     methods:{
-        product(params){
+        produce(params){
             try{
-                this.repository.invoke(this.getSelectedItem(), "product", params)
-                this.$EventBus.$emit('show-success','product 성공적으로 처리되었습니다.')
-                this.productDialog = false
+                this.repository.invoke(this.getSelectedItem(), "produce", params)
+                this.$EventBus.$emit('show-success','produce 성공적으로 처리되었습니다.')
+                this.produceDialog = false
             }catch(e){
                 console.log(e)
             }

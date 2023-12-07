@@ -21,6 +21,7 @@
             <SalesType offline label="SalesType" v-model="value.salesType" :editMode="editMode" @change="change"/>
             <CompanyId offline label="CompanyId" v-model="value.companyId" :editMode="editMode" @change="change"/>
             <Status offline label="Status" v-model="value.status" :editMode="editMode" @change="change"/>
+            <List&lt;SalesItem&gt; offline label="SalesItems" v-model="value.salesItems" :editMode="editMode" @change="change"/>
             <SalesItemManager offline label="SalesItems" v-model="value.salesItems" :editMode="editMode" @change="change"/>
         </v-card-text>
 
@@ -80,15 +81,15 @@
                 v-if="!editMode"
                 color="primary"
                 text
-                @click="openProduct"
+                @click="openProduce"
             >
-                Product
+                Produce
             </v-btn>
-            <v-dialog v-model="productDiagram" width="500">
-                <ProductCommand
-                    @closeDialog="closeProduct"
-                    @product="product"
-                ></ProductCommand>
+            <v-dialog v-model="produceDiagram" width="500">
+                <ProduceCommand
+                    @closeDialog="closeProduce"
+                    @produce="produce"
+                ></ProduceCommand>
             </v-dialog>
         </v-card-actions>
 
@@ -127,7 +128,7 @@
                 timeout: 5000,
                 text: '',
             },
-            productDiagram: false,
+            produceDiagram: false,
         }),
 	async created() {
         },
@@ -225,7 +226,7 @@
             change(){
                 this.$emit('input', this.value);
             },
-            async product(params) {
+            async produce(params) {
                 try {
                     if(!this.offline) {
                         var temp = await axios.put(axios.fixUrl(this.value._links['product'].href), params)
@@ -235,7 +236,7 @@
                     }
 
                     this.editMode = false;
-                    this.closeProduct();
+                    this.closeProduce();
                 } catch(e) {
                     this.snackbar.status = true
                     if(e.response && e.response.data.message) {
@@ -245,11 +246,11 @@
                     }
                 }
             },
-            openProduct() {
-                this.productDiagram = true;
+            openProduce() {
+                this.produceDiagram = true;
             },
-            closeProduct() {
-                this.productDiagram = false;
+            closeProduce() {
+                this.produceDiagram = false;
             },
         },
     }

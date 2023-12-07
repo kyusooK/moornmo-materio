@@ -55,7 +55,7 @@ public class SalesOrder {
     }
 
     //<<< Clean Arch / Port Method
-    public void product(ProductCommand productCommand) {
+    public void produce(ProduceCommand produceCommand) {
         //implement business logic here:
 
         Produced produced = new Produced(this);
