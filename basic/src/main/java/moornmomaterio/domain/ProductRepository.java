@@ -15,12 +15,12 @@ public interface ProductRepository
     @Query(
         value = "select product " +
         "from Product product " +
-        "where(:name is null or product.name like %:name%) and (:code is null or product.code like %:code%) and (:status is null or product.status like %:status%)"
+        "where(:name is null or product.name like %:name%) and (:code is null or product.code like %:code%) and (:productStatus is null or product.productStatus like %:productStatus%)"
     )
     List<Product> findByProductQuery(
         String name,
         String code,
-        Status status,
+        ProductStatus productStatus,
         Pageable pageable
     );
 }
