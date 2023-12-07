@@ -15,13 +15,10 @@ import org.springframework.beans.BeanUtils;
 @NoArgsConstructor
 public class SalesItem {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long qty;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long price;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private ProductId productId;
 }
 //>>> DDD / Value Object

@@ -10,6 +10,9 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import axios from 'axios';
 import { Icon } from '@iconify/vue';
+import VCalendar from 'v-calendar';
+import 'v-calendar/style.css';
+
 
 axios.defaults.baseURL = ''
 
@@ -25,6 +28,8 @@ app.use(vuetify)
 app.use(createPinia())
 
 app.use(router)
+
+app.use(VCalendar, {})
 
 app.component('Icon',Icon)
 
